@@ -2,7 +2,7 @@
 //  whitespaceApp.swift
 //  whitespace
 //
-//  Created by 白无常 on 2026/5/26.
+//  用途：应用入口，配置 SwiftData 容器并挂载根视图。
 //
 
 import SwiftUI
@@ -10,23 +10,49 @@ import SwiftData
 
 @main
 struct whitespaceApp: App {
-    var sharedModelContainer: ModelContainer = {
+    private let sharedModelContainer: ModelContainer?
+
+    init() {
         let schema = Schema([
-            Item.self,
+            TodoItem.self,
+            FocusRecord.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
         do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
+            sharedModelContainer = try ModelContainer(for: schema, configurations: [modelConfiguration])
         } catch {
-            fatalError("Could not create ModelContainer: \(error)")
+            sharedModelContainer = nil
         }
-    }()
+    }
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if let sharedModelContainer {
+                ContentView()
+                    .modelContainer(sharedModelContainer)
+            } else {
+                StartupFailureView()
+            }
         }
-        .modelContainer(sharedModelContainer)
+    }
+}
+
+private struct StartupFailureView: View {
+    var body: some View {
+        VStack(spacing: 14) {
+            Image(systemName: "exclamationmark.triangle.fill")
+                .font(.system(size: 32, weight: .semibold))
+                .foregroundStyle(.orange)
+            Text("本地数据暂时无法打开")
+                .font(.system(size: 18, weight: .semibold))
+            Text("请重启应用。如果问题持续存在，请重新安装后再试。")
+                .font(.system(size: 14))
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 32)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color(.systemBackground))
     }
 }

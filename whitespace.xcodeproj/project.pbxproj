@@ -6,8 +6,47 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		63CAED082FC55A0000933F43 /* whitespaceDeviceActivityMonitor.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 63CAED012FC55A0000933F43 /* whitespaceDeviceActivityMonitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		63CAF0082FC6000000933F43 /* whitespaceFocusLiveActivityWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 63CAF0072FC6000000933F43 /* whitespaceFocusLiveActivityWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		63CAED092FC55A0000933F43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63CAEC7B2FC54C7700933F43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63CAED032FC55A0000933F43;
+			remoteInfo = whitespaceDeviceActivityMonitor;
+		};
+		63CAF0092FC6000000933F43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63CAEC7B2FC54C7700933F43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63CAF0032FC6000000933F43;
+			remoteInfo = whitespaceFocusLiveActivityWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		63CAED072FC55A0000933F43 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				63CAED082FC55A0000933F43 /* whitespaceDeviceActivityMonitor.appex in Embed App Extensions */,
+				63CAF0082FC6000000933F43 /* whitespaceFocusLiveActivityWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		63CAEC832FC54C7800933F43 /* whitespace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whitespace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63CAED012FC55A0000933F43 /* whitespaceDeviceActivityMonitor.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = whitespaceDeviceActivityMonitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		63CAF0072FC6000000933F43 /* whitespaceFocusLiveActivityWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = whitespaceFocusLiveActivityWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +55,39 @@
 			path = whitespace;
 			sourceTree = "<group>";
 		};
+		63CAED022FC55A0000933F43 /* whitespaceDeviceActivityMonitor */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = whitespaceDeviceActivityMonitor;
+			sourceTree = "<group>";
+		};
+		63CAF0012FC6000000933F43 /* whitespaceShared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = whitespaceShared;
+			sourceTree = "<group>";
+		};
+		63CAF0022FC6000000933F43 /* whitespaceFocusLiveActivityWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = whitespaceFocusLiveActivityWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		63CAEC802FC54C7700933F43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63CAED052FC55A0000933F43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63CAF0052FC6000000933F43 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +101,9 @@
 			isa = PBXGroup;
 			children = (
 				63CAEC852FC54C7800933F43 /* whitespace */,
+				63CAF0012FC6000000933F43 /* whitespaceShared */,
+				63CAED022FC55A0000933F43 /* whitespaceDeviceActivityMonitor */,
+				63CAF0022FC6000000933F43 /* whitespaceFocusLiveActivityWidget */,
 				63CAEC842FC54C7800933F43 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				63CAEC832FC54C7800933F43 /* whitespace.app */,
+				63CAED012FC55A0000933F43 /* whitespaceDeviceActivityMonitor.appex */,
+				63CAF0072FC6000000933F43 /* whitespaceFocusLiveActivityWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,13 +128,17 @@
 				63CAEC7F2FC54C7700933F43 /* Sources */,
 				63CAEC802FC54C7700933F43 /* Frameworks */,
 				63CAEC812FC54C7700933F43 /* Resources */,
+				63CAED072FC55A0000933F43 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				63CAED0A2FC55A0000933F43 /* PBXTargetDependency */,
+				63CAF00A2FC6000000933F43 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				63CAEC852FC54C7800933F43 /* whitespace */,
+				63CAF0012FC6000000933F43 /* whitespaceShared */,
 			);
 			name = whitespace;
 			packageProductDependencies = (
@@ -69,6 +146,51 @@
 			productName = whitespace;
 			productReference = 63CAEC832FC54C7800933F43 /* whitespace.app */;
 			productType = "com.apple.product-type.application";
+		};
+		63CAED032FC55A0000933F43 /* whitespaceDeviceActivityMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63CAED0B2FC55A0000933F43 /* Build configuration list for PBXNativeTarget "whitespaceDeviceActivityMonitor" */;
+			buildPhases = (
+				63CAED042FC55A0000933F43 /* Sources */,
+				63CAED052FC55A0000933F43 /* Frameworks */,
+				63CAED062FC55A0000933F43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				63CAED022FC55A0000933F43 /* whitespaceDeviceActivityMonitor */,
+			);
+			name = whitespaceDeviceActivityMonitor;
+			packageProductDependencies = (
+			);
+			productName = whitespaceDeviceActivityMonitor;
+			productReference = 63CAED012FC55A0000933F43 /* whitespaceDeviceActivityMonitor.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		63CAF0032FC6000000933F43 /* whitespaceFocusLiveActivityWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63CAF00B2FC6000000933F43 /* Build configuration list for PBXNativeTarget "whitespaceFocusLiveActivityWidget" */;
+			buildPhases = (
+				63CAF0042FC6000000933F43 /* Sources */,
+				63CAF0052FC6000000933F43 /* Frameworks */,
+				63CAF0062FC6000000933F43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				63CAF0012FC6000000933F43 /* whitespaceShared */,
+				63CAF0022FC6000000933F43 /* whitespaceFocusLiveActivityWidget */,
+			);
+			name = whitespaceFocusLiveActivityWidget;
+			packageProductDependencies = (
+			);
+			productName = whitespaceFocusLiveActivityWidget;
+			productReference = 63CAF0072FC6000000933F43 /* whitespaceFocusLiveActivityWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +203,12 @@
 				LastUpgradeCheck = 2650;
 				TargetAttributes = {
 					63CAEC822FC54C7700933F43 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					63CAED032FC55A0000933F43 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					63CAF0032FC6000000933F43 = {
 						CreatedOnToolsVersion = 26.5;
 					};
 				};
@@ -100,12 +228,28 @@
 			projectRoot = "";
 			targets = (
 				63CAEC822FC54C7700933F43 /* whitespace */,
+				63CAED032FC55A0000933F43 /* whitespaceDeviceActivityMonitor */,
+				63CAF0032FC6000000933F43 /* whitespaceFocusLiveActivityWidget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		63CAEC812FC54C7700933F43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63CAED062FC55A0000933F43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63CAF0062FC6000000933F43 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +266,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		63CAED042FC55A0000933F43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63CAF0042FC6000000933F43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63CAED0A2FC55A0000933F43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63CAED032FC55A0000933F43 /* whitespaceDeviceActivityMonitor */;
+			targetProxy = 63CAED092FC55A0000933F43 /* PBXContainerItemProxy */;
+		};
+		63CAF00A2FC6000000933F43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63CAF0032FC6000000933F43 /* whitespaceFocusLiveActivityWidget */;
+			targetProxy = 63CAF0092FC6000000933F43 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		63CAEC8E2FC54C7900933F43 /* Debug */ = {
@@ -178,7 +349,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -236,7 +407,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -251,21 +422,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = whitespace/whitespace.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 989L4R79GP;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "whitespace-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aic4d.whitespace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -283,21 +457,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = whitespace/whitespace.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 989L4R79GP;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "whitespace-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aic4d.whitespace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -307,6 +484,120 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		63CAED0C2FC55A0000933F43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = whitespaceDeviceActivityMonitor/whitespaceDeviceActivityMonitor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 989L4R79GP;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "whitespaceDeviceActivityMonitor-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aic4d.whitespace.deviceactivitymonitor1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		63CAED0D2FC55A0000933F43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = whitespaceDeviceActivityMonitor/whitespaceDeviceActivityMonitor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 989L4R79GP;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "whitespaceDeviceActivityMonitor-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aic4d.whitespace.deviceactivitymonitor1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63CAF00C2FC6000000933F43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 989L4R79GP;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "whitespaceFocusLiveActivityWidget-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aic4d.whitespace.focusliveactivitywidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		63CAF00D2FC6000000933F43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 989L4R79GP;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "whitespaceFocusLiveActivityWidget-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aic4d.whitespace.focusliveactivitywidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -327,6 +618,24 @@
 			buildConfigurations = (
 				63CAEC912FC54C7900933F43 /* Debug */,
 				63CAEC922FC54C7900933F43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63CAED0B2FC55A0000933F43 /* Build configuration list for PBXNativeTarget "whitespaceDeviceActivityMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63CAED0C2FC55A0000933F43 /* Debug */,
+				63CAED0D2FC55A0000933F43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63CAF00B2FC6000000933F43 /* Build configuration list for PBXNativeTarget "whitespaceFocusLiveActivityWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63CAF00C2FC6000000933F43 /* Debug */,
+				63CAF00D2FC6000000933F43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
