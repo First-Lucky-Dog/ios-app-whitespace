@@ -113,7 +113,7 @@ final class FocusAppState: ObservableObject {
     }
 
     var hasRequiredPermissions: Bool {
-        screenTimeAuthorized && notificationAuthorized
+        screenTimeAuthorized
     }
 
     func enterApp() {

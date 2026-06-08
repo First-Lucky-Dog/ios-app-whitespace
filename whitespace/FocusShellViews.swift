@@ -265,7 +265,7 @@ struct PermissionsView: View {
                     }
                     DividerLine()
                     IOSListRow {
-                        ListLabel(title: "本地通知", subtitle: "用于专注状态结束提醒", titleWeight: .medium)
+                        ListLabel(title: "本地通知（可选）", subtitle: "用于专注结束提醒，可稍后在设置中开启", titleWeight: .medium)
                     } trailing: {
                         SmallPillButton(title: notificationAuthorized ? "已授权" : "允许", isActive: notificationAuthorized, action: onRequestNotifications)
                     }
@@ -285,7 +285,7 @@ struct PermissionsView: View {
         }
         .safeAreaInset(edge: .bottom) {
             VStack(spacing: 4) {
-                PrimaryButton(title: "完成并开启", isEnabled: screenTimeReadyForPermissionCompletion && notificationAuthorized, action: onComplete)
+                PrimaryButton(title: "完成并开启", isEnabled: screenTimeReadyForPermissionCompletion, action: onComplete)
                 GhostButton(title: "返回", action: onBack)
             }
             .padding(.horizontal, FocusLayout.pageHorizontalPadding)
